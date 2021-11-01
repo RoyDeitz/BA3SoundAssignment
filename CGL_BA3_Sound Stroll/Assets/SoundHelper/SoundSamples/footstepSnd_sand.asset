@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7bdab3550ee0834f92cc7fcc98c0570, type: 3}
+  m_Name: footstepSnd_sand
+  m_EditorClassIdentifier: 
+  soundName: footsteps_sand
+  sounds:
+  - {fileID: 8300000, guid: 05536b35e2af11a42a8c1174e1152c87, type: 3}
+  - {fileID: 8300000, guid: 99346553beb46604ead5af871d8603a8, type: 3}
+  - {fileID: 8300000, guid: 0fd6fbc2e56e6924c826dc1fbe38b078, type: 3}
+  - {fileID: 8300000, guid: 511fdbf6cbfc1154cb1cf0991ca231df, type: 3}

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7bdab3550ee0834f92cc7fcc98c0570, type: 3}
+  m_Name: footstepSnd_grass
+  m_EditorClassIdentifier: 
+  soundName: footsteps_grass
+  sounds:
+  - {fileID: 8300000, guid: 76bb9740688192e48b99b3745b504bd2, type: 3}
+  - {fileID: 8300000, guid: 024ad4540243e8544a5979b3a4f91384, type: 3}
+  - {fileID: 8300000, guid: c8b018ade60fe954d8b5c0337944fa5a, type: 3}
+  - {fileID: 8300000, guid: de5f4fe4106281c49af23cc712d6889b, type: 3}

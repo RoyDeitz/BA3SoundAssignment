@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7bdab3550ee0834f92cc7fcc98c0570, type: 3}
+  m_Name: footstepSnd_concrete
+  m_EditorClassIdentifier: 
+  soundName: footsteps_stone
+  sounds:
+  - {fileID: 8300000, guid: 18ac1ea09f7db65439ba966b10672082, type: 3}
+  - {fileID: 8300000, guid: be086863a431c6d4299807eb01904f8e, type: 3}
+  - {fileID: 8300000, guid: 8d00ea1a1d2509749b5b1c30617e450f, type: 3}
+  - {fileID: 8300000, guid: dd1b673847d92dd479d0dca199d706d7, type: 3}

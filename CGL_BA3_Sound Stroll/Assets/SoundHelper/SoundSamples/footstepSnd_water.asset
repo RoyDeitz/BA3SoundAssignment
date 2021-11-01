@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7bdab3550ee0834f92cc7fcc98c0570, type: 3}
+  m_Name: footstepSnd_water
+  m_EditorClassIdentifier: 
+  soundName: footsteps_water
+  sounds:
+  - {fileID: 8300000, guid: 977d1d0f8d338094ab51a1292897355f, type: 3}
+  - {fileID: 8300000, guid: bc05f5b9f110a8b4b8b3ea9913faa9be, type: 3}
+  - {fileID: 8300000, guid: de1b04b807da76144a8e32ec7e5871b1, type: 3}
+  - {fileID: 8300000, guid: 82730a995e6644844bb6f82f163b0a74, type: 3}
