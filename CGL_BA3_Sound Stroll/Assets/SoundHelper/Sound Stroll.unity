@@ -16904,7 +16904,7 @@ MonoBehaviour:
   bgMusicLionsPride: {fileID: 1255393369}
   bgMusicFFXIV: {fileID: 1790654911}
   fadeInTime: 1.88
-  maxVolume: 1
+  maxVolume: 0.7
   activeBGMusic: 0
 --- !u!1001 &929365459
 PrefabInstance:
