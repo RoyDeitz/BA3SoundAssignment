@@ -44,11 +44,11 @@ public class BGMusicSwitcher : MonoBehaviour
                 bgMusicOblivion.volume = Mathf.Lerp(0f, maxVolume, timwElapsed / fadeInTime);
                 if (bgMusicLionsPride.isPlaying) 
                 {
-                    bgMusicLionsPride.volume = Mathf.Lerp(bgMusicLionsPride.volume, 0f, timwElapsed/ fadeInTime);
+                    bgMusicLionsPride.volume = Mathf.Lerp(maxVolume, 0f, timwElapsed/ fadeInTime);
                 }
                 if (bgMusicFFXIV.isPlaying)
                 {
-                    bgMusicFFXIV.volume = Mathf.Lerp(bgMusicFFXIV.volume, 0f, timwElapsed / fadeInTime);
+                    bgMusicFFXIV.volume = Mathf.Lerp(maxVolume, 0f, timwElapsed / fadeInTime);
                 }
                 timwElapsed += Time.deltaTime;
                 yield return null;
