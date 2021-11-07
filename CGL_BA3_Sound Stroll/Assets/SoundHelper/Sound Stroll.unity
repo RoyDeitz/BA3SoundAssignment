@@ -23520,15 +23520,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25af4615955b62248ba93a6286bc9863, type: 3}
---- !u!1 &1335611403 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3444926475974686328, guid: 956fb795542fefb458a9537d13cfce92,
-    type: 3}
-  m_PrefabInstance: {fileID: 1834215797}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1335611404 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3444926475974686334, guid: 956fb795542fefb458a9537d13cfce92,
+    type: 3}
+  m_PrefabInstance: {fileID: 1834215797}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1335611405 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3444926475974686329, guid: 956fb795542fefb458a9537d13cfce92,
     type: 3}
   m_PrefabInstance: {fileID: 1834215797}
   m_PrefabAsset: {fileID: 0}
@@ -31432,10 +31432,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f69392c78c91874b8eb24f892650f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsWindy: 0
+  IsWindy: 1
   IsBackyard: 0
-  windyAmbienceObj: {fileID: 1335611403}
-  backwardAmbienceObj: {fileID: 2120219648}
+  windyAmbienceSound: {fileID: 1335611405}
+  backyardAmbienceSound: {fileID: 2120219650}
+  fadeInTime: 1.85
 --- !u!1001 &1820595346
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37164,15 +37165,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7977f4430bc4bfb4381ef27336dcf4e1, type: 3}
---- !u!1 &2120219648 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3444926475974686328, guid: 956fb795542fefb458a9537d13cfce92,
-    type: 3}
-  m_PrefabInstance: {fileID: 404979671}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2120219649 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3444926475974686334, guid: 956fb795542fefb458a9537d13cfce92,
+    type: 3}
+  m_PrefabInstance: {fileID: 404979671}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &2120219650 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3444926475974686329, guid: 956fb795542fefb458a9537d13cfce92,
     type: 3}
   m_PrefabInstance: {fileID: 404979671}
   m_PrefabAsset: {fileID: 0}

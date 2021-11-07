@@ -25,6 +25,7 @@ public class AmbienceTrigger : MonoBehaviour
                 if (ambienceSwitcher != null)
                 {
                     ambienceSwitcher.IsWindy = true;
+                    ambienceSwitcher.SwitchAmbience();
                 }
             }
             else if (ambienceMode == AmbienceMode.BACKYARD)
@@ -32,6 +33,7 @@ public class AmbienceTrigger : MonoBehaviour
                 if (ambienceSwitcher != null)
                 {
                     ambienceSwitcher.IsBackyard = true;
+                    ambienceSwitcher.SwitchAmbience();
                 }
             }
         }
@@ -46,6 +48,7 @@ public class AmbienceTrigger : MonoBehaviour
                 if (ambienceSwitcher != null)
                 {
                     ambienceSwitcher.IsWindy = false;
+                    ambienceSwitcher.SwitchAmbience();
                 }
             }
             else if (ambienceMode == AmbienceMode.BACKYARD)
@@ -53,6 +56,7 @@ public class AmbienceTrigger : MonoBehaviour
                 if (ambienceSwitcher != null)
                 {
                     ambienceSwitcher.IsBackyard = false;
+                    ambienceSwitcher.SwitchAmbience();
                 }
             }
         }
