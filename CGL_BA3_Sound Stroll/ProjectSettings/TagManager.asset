@@ -11,6 +11,7 @@ TagManager:
   - Fire
   - footsteps_metal
   - footsteps_stone
+  - footstepSnd_water
   layers:
   - Default
   - TransparentFX
