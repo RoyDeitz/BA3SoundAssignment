@@ -8,15 +8,17 @@ public class AmbienceSwitcher : MonoBehaviour
     public bool IsBackyard;
     public GameObject windyAmbienceObj;
     public GameObject backwardAmbienceObj;
+ 
 
     private void Update()
     {
         if (IsWindy)
         {
             IsBackyard = false;
+            //windyAmbienceObj.SetActive(true);
             if (!windyAmbienceObj.activeSelf)
             {
-                windyAmbienceObj.SetActive(true);
+                 windyAmbienceObj.SetActive(true);
             }
         }
         else 
