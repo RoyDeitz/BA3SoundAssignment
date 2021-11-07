@@ -7,14 +7,10 @@ public class BGMusicSwitcher : MonoBehaviour
     public AudioSource bgMusicOblivion;
     public AudioSource bgMusicLionsPride;
     public AudioSource bgMusicFFXIV;
-    [Range(.01f, .1f)]
-    public float increaseBy=.1f;
-    [Range(.01f, .1f)]
-    public float decreaseBy=.1f;
-    [Range(.01f, .1f)]
-    public float smoothingTime=.1f;
+    [Range(.1f,2f)]
+    public float fadeInTime=1.2f;
     [Range(.1f, 1f)]
-    public float maxVolume=.8f;
+    public float maxVolume=.7f;
 
     public enum ActiveBGMusic
     {
@@ -23,73 +19,86 @@ public class BGMusicSwitcher : MonoBehaviour
         FFXIV
     }
     public ActiveBGMusic activeBGMusic;
-    // Start is called before the first frame update
-    void Start()
-    {
 
+    private void Start()
+    {
+        SwapBGMusic();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SwapBGMusic() 
     {
-
+        StopAllCoroutines();
+        StartCoroutine(FadeInBGMusic());
     }
+  
 
-    void FadeOutOtherBGMusic()
+    IEnumerator FadeInBGMusic()
     {
+        float timwElapsed = 0f;
         if (activeBGMusic == ActiveBGMusic.Oblivion)
         {
-            StartCoroutine(FadeOutThisMusic(bgMusicFFXIV));
-            StartCoroutine(FadeOutThisMusic(bgMusicLionsPride));
+            bgMusicOblivion.Play();
+
+            while (timwElapsed < fadeInTime) 
+            {
+                bgMusicOblivion.volume = Mathf.Lerp(0f, maxVolume, fadeInTime);
+                if (bgMusicLionsPride.isPlaying) 
+                {
+                    bgMusicLionsPride.volume = Mathf.Lerp(bgMusicLionsPride.volume, 0f, fadeInTime);
+                }
+                if (bgMusicFFXIV.isPlaying)
+                {
+                    bgMusicFFXIV.volume = Mathf.Lerp(bgMusicFFXIV.volume, 0f, fadeInTime);
+                }
+                timwElapsed += Time.deltaTime;
+                yield return null;
+            }
+            bgMusicFFXIV.Stop();
+            bgMusicLionsPride.Stop();
 
         }
         else if (activeBGMusic == ActiveBGMusic.LionsPride)
         {
-            StartCoroutine(FadeOutThisMusic(bgMusicFFXIV));
-            StartCoroutine(FadeOutThisMusic(bgMusicOblivion));
+            bgMusicLionsPride.Play();
+
+            while (timwElapsed < fadeInTime)
+            {
+                bgMusicLionsPride.volume = Mathf.Lerp(0f, maxVolume, fadeInTime);
+                if (bgMusicOblivion.isPlaying)
+                {
+                    bgMusicOblivion.volume = Mathf.Lerp(bgMusicOblivion.volume, 0f, fadeInTime);
+                }
+                if (bgMusicFFXIV.isPlaying)
+                {
+                    bgMusicFFXIV.volume = Mathf.Lerp(bgMusicFFXIV.volume, 0f, fadeInTime);
+                }
+                timwElapsed += Time.deltaTime;
+                yield return null;
+            }
+            bgMusicFFXIV.Stop();
+            bgMusicOblivion.Stop();
         }
         else if (activeBGMusic == ActiveBGMusic.FFXIV)
         {
-            StartCoroutine(FadeOutThisMusic(bgMusicLionsPride));
-            StartCoroutine(FadeOutThisMusic(bgMusicOblivion));
+            bgMusicFFXIV.Play();
+
+            while (timwElapsed < fadeInTime)
+            {
+                bgMusicFFXIV.volume = Mathf.Lerp(0f, maxVolume, fadeInTime);
+                if (bgMusicOblivion.isPlaying)
+                {
+                    bgMusicOblivion.volume = Mathf.Lerp(bgMusicOblivion.volume, 0f, fadeInTime);
+                }
+                if (bgMusicLionsPride.isPlaying)
+                {
+                    bgMusicLionsPride.volume = Mathf.Lerp(bgMusicLionsPride.volume, 0f, fadeInTime);
+                }
+                timwElapsed += Time.deltaTime;
+                yield return null;
+            }
+            bgMusicLionsPride.Stop();
+            bgMusicOblivion.Stop();
         }
     }
 
-    IEnumerator FadeOutThisMusic(AudioSource audioSource)
-    {
-        while (audioSource.volume != 0)
-        {
-            float tempVol = bgMusicFFXIV.volume;
-            tempVol -= decreaseBy;
-            if (tempVol <= 0)
-            {
-                audioSource.volume = 0;
-            }
-            else
-            {
-                audioSource.volume = tempVol;
-            }
-            yield return new WaitForSeconds(smoothingTime);
-        }
-
-    }
-
-    IEnumerator FadeInThisMusic(AudioSource audioSource)
-    {
-        while (audioSource.volume != .8)
-        {
-            float tempVol = bgMusicFFXIV.volume;
-            tempVol -= decreaseBy;
-            if (tempVol <= 0)
-            {
-                audioSource.volume = 0;
-            }
-            else
-            {
-                audioSource.volume = tempVol;
-            }
-            yield return new WaitForSeconds(smoothingTime);
-        }
-
-    }
 }
