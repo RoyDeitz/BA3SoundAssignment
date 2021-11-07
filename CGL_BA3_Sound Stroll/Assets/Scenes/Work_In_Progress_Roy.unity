@@ -7154,7 +7154,7 @@ MonoBehaviour:
   bgMusicOblivion: {fileID: 1281784142}
   bgMusicLionsPride: {fileID: 716082935}
   bgMusicFFXIV: {fileID: 1270231319}
-  fadeInTime: 1.79
+  fadeInTime: 1.88
   maxVolume: 1
   activeBGMusic: 0
 --- !u!4 &506335950
@@ -7351,101 +7351,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 956fb795542fefb458a9537d13cfce92, type: 3}
---- !u!1 &541226348
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 541226349}
-  - component: {fileID: 541226352}
-  - component: {fileID: 541226351}
-  - component: {fileID: 541226350}
-  m_Layer: 0
-  m_Name: FFXIVTrigger (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &541226349
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 541226348}
-  m_LocalRotation: {x: 1.5511696e-16, y: 0.704545, z: 0.000000083988304, w: 0.7096594}
-  m_LocalPosition: {x: 0.77456045, y: -0.0010299112, z: -0.44799}
-  m_LocalScale: {x: 0.2698098, y: 1, z: 4.1974964}
-  m_Children: []
-  m_Father: {fileID: 1419415376}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 89.586, z: 0}
---- !u!65 &541226350
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 541226348}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &541226351
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 541226348}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &541226352
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 541226348}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &541954508 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 7f3f9dd74e3766a4dbf5bdbbc9ee54ff,
@@ -17397,6 +17302,8 @@ GameObject:
   - component: {fileID: 1419415374}
   - component: {fileID: 1419415373}
   - component: {fileID: 1419415377}
+  - component: {fileID: 1419415379}
+  - component: {fileID: 1419415378}
   m_Layer: 0
   m_Name: FFXIVTrigger
   m_TagString: Untagged
@@ -17475,10 +17382,8 @@ Transform:
   m_GameObject: {fileID: 1419415372}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -176.4, y: 18.9, z: -125}
-  m_LocalScale: {x: 36.665947, y: 40.181858, z: 158.03926}
-  m_Children:
-  - {fileID: 541226349}
-  - {fileID: 2011615606}
+  m_LocalScale: {x: 55.91557, y: 55.266125, z: 158.03926}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 151
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17495,6 +17400,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetBGMusic: 2
+--- !u!65 &1419415378
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419415372}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.3786266, y: 0.99999976, z: 0.23816822}
+  m_Center: {x: 0.68931204, y: 0, z: -0.38091594}
+--- !u!65 &1419415379
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419415372}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8593277, y: 0.99999976, z: 0.30029634}
+  m_Center: {x: 0.42966244, y: 0, z: 0.34985188}
 --- !u!1001 &1420719787
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20526,6 +20457,7 @@ GameObject:
   - component: {fileID: 1695954354}
   - component: {fileID: 1695954353}
   - component: {fileID: 1695954357}
+  - component: {fileID: 1695954358}
   m_Layer: 0
   m_Name: OblivionTrigger
   m_TagString: Untagged
@@ -20605,8 +20537,7 @@ Transform:
   m_LocalRotation: {x: -5.175508e-18, y: -0.78510004, z: -0.000000093591204, w: 0.61936903}
   m_LocalPosition: {x: -59.6, y: 8.1, z: -84.3}
   m_LocalScale: {x: 116.28877, y: 66.09547, z: 66.09547}
-  m_Children:
-  - {fileID: 1697365449}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 150
   m_LocalEulerAnglesHint: {x: 0, y: -103.46, z: 0}
@@ -20623,6 +20554,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetBGMusic: 0
+--- !u!65 &1695954358
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695954352}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5254238, y: 1, z: 0.8158434}
+  m_Center: {x: -0.26271093, y: -4.6185585e-15, z: -0.09207909}
 --- !u!1001 &1696409572
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20707,101 +20651,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4edf36f8eb31e0a46b8b049857b38a35, type: 3}
---- !u!1 &1697365448
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1697365449}
-  - component: {fileID: 1697365452}
-  - component: {fileID: 1697365451}
-  - component: {fileID: 1697365450}
-  m_Layer: 0
-  m_Name: OblivionTrigger (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1697365449
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1697365448}
-  m_LocalRotation: {x: 0.000000013723069, y: -0.9742024, z: -0.0000000050173123, w: -0.22567645}
-  m_LocalPosition: {x: -0.601, y: -0, z: -0.069}
-  m_LocalScale: {x: 0.8770008, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1695954356}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -206.085, z: 0}
---- !u!135 &1697365450
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1697365448}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1697365451
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1697365448}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1697365452
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1697365448}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1698160192
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23504,101 +23353,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25af4615955b62248ba93a6286bc9863, type: 3}
---- !u!1 &2011615605
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2011615606}
-  - component: {fileID: 2011615609}
-  - component: {fileID: 2011615608}
-  - component: {fileID: 2011615607}
-  m_Layer: 0
-  m_Name: FFXIVTrigger (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2011615606
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2011615605}
-  m_LocalRotation: {x: 1.5511696e-16, y: 0.704545, z: 0.000000083988304, w: 0.7096594}
-  m_LocalPosition: {x: 0.64092165, y: -0.0010299112, z: 0.3967369}
-  m_LocalScale: {x: 0.2639166, y: 1, z: 2.7449794}
-  m_Children: []
-  m_Father: {fileID: 1419415376}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 89.586, z: 0}
---- !u!65 &2011615607
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2011615605}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &2011615608
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2011615605}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &2011615609
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2011615605}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &2055589211 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3444926475974686328, guid: 956fb795542fefb458a9537d13cfce92,

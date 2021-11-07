@@ -7,8 +7,8 @@ public class BGMusicSwitcher : MonoBehaviour
     public AudioSource bgMusicOblivion;
     public AudioSource bgMusicLionsPride;
     public AudioSource bgMusicFFXIV;
-    [Range(.1f,2f)]
-    public float fadeInTime=1.2f;
+    [Range(.5f,5f)]
+    public float fadeInTime=2f;
     [Range(.1f, 1f)]
     public float maxVolume=.7f;
 
@@ -41,14 +41,14 @@ public class BGMusicSwitcher : MonoBehaviour
 
             while (timwElapsed < fadeInTime) 
             {
-                bgMusicOblivion.volume = Mathf.Lerp(0f, maxVolume, fadeInTime);
+                bgMusicOblivion.volume = Mathf.Lerp(0f, maxVolume, timwElapsed / fadeInTime);
                 if (bgMusicLionsPride.isPlaying) 
                 {
-                    bgMusicLionsPride.volume = Mathf.Lerp(bgMusicLionsPride.volume, 0f, fadeInTime);
+                    bgMusicLionsPride.volume = Mathf.Lerp(bgMusicLionsPride.volume, 0f, timwElapsed/ fadeInTime);
                 }
                 if (bgMusicFFXIV.isPlaying)
                 {
-                    bgMusicFFXIV.volume = Mathf.Lerp(bgMusicFFXIV.volume, 0f, fadeInTime);
+                    bgMusicFFXIV.volume = Mathf.Lerp(bgMusicFFXIV.volume, 0f, timwElapsed / fadeInTime);
                 }
                 timwElapsed += Time.deltaTime;
                 yield return null;
@@ -63,14 +63,14 @@ public class BGMusicSwitcher : MonoBehaviour
 
             while (timwElapsed < fadeInTime)
             {
-                bgMusicLionsPride.volume = Mathf.Lerp(0f, maxVolume, fadeInTime);
+                bgMusicLionsPride.volume = Mathf.Lerp(0f, maxVolume, timwElapsed / fadeInTime);
                 if (bgMusicOblivion.isPlaying)
                 {
-                    bgMusicOblivion.volume = Mathf.Lerp(bgMusicOblivion.volume, 0f, fadeInTime);
+                    bgMusicOblivion.volume = Mathf.Lerp(maxVolume, 0f, timwElapsed / fadeInTime);
                 }
                 if (bgMusicFFXIV.isPlaying)
                 {
-                    bgMusicFFXIV.volume = Mathf.Lerp(bgMusicFFXIV.volume, 0f, fadeInTime);
+                    bgMusicFFXIV.volume = Mathf.Lerp(maxVolume, 0f, timwElapsed / fadeInTime);
                 }
                 timwElapsed += Time.deltaTime;
                 yield return null;
@@ -84,14 +84,14 @@ public class BGMusicSwitcher : MonoBehaviour
 
             while (timwElapsed < fadeInTime)
             {
-                bgMusicFFXIV.volume = Mathf.Lerp(0f, maxVolume, fadeInTime);
+                bgMusicFFXIV.volume = Mathf.Lerp(0f, maxVolume, timwElapsed / fadeInTime);
                 if (bgMusicOblivion.isPlaying)
                 {
-                    bgMusicOblivion.volume = Mathf.Lerp(bgMusicOblivion.volume, 0f, fadeInTime);
+                    bgMusicOblivion.volume = Mathf.Lerp(maxVolume, 0f, timwElapsed / fadeInTime);
                 }
                 if (bgMusicLionsPride.isPlaying)
                 {
-                    bgMusicLionsPride.volume = Mathf.Lerp(bgMusicLionsPride.volume, 0f, fadeInTime);
+                    bgMusicLionsPride.volume = Mathf.Lerp(maxVolume, 0f, timwElapsed / fadeInTime);
                 }
                 timwElapsed += Time.deltaTime;
                 yield return null;

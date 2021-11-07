@@ -21,11 +21,31 @@ public class BGMusicTrigger : MonoBehaviour
     {
         if (other.tag == "Player") 
         {
-            if (targetBGMusic == TargetBGMusic.Oblivion) bgMusicSwitcher.activeBGMusic = BGMusicSwitcher.ActiveBGMusic.Oblivion;
-            else if (targetBGMusic == TargetBGMusic.LionsPride) bgMusicSwitcher.activeBGMusic = BGMusicSwitcher.ActiveBGMusic.LionsPride;
-            else if (targetBGMusic == TargetBGMusic.FFXIV) bgMusicSwitcher.activeBGMusic = BGMusicSwitcher.ActiveBGMusic.FFXIV;
-
-            bgMusicSwitcher.SwapBGMusic();
+            if (targetBGMusic == TargetBGMusic.Oblivion)
+            {
+                if (bgMusicSwitcher.activeBGMusic != BGMusicSwitcher.ActiveBGMusic.Oblivion)
+                {
+                    bgMusicSwitcher.activeBGMusic = BGMusicSwitcher.ActiveBGMusic.Oblivion;
+                    bgMusicSwitcher.SwapBGMusic();
+                }
+            }
+            else if (targetBGMusic == TargetBGMusic.LionsPride)
+            {
+                if (bgMusicSwitcher.activeBGMusic != BGMusicSwitcher.ActiveBGMusic.LionsPride)
+                {
+                    bgMusicSwitcher.activeBGMusic = BGMusicSwitcher.ActiveBGMusic.LionsPride;
+                    bgMusicSwitcher.SwapBGMusic();
+                }
+            }
+            else if (targetBGMusic == TargetBGMusic.FFXIV)
+            {
+                if (bgMusicSwitcher.activeBGMusic != BGMusicSwitcher.ActiveBGMusic.Oblivion)
+                {
+                    bgMusicSwitcher.activeBGMusic = BGMusicSwitcher.ActiveBGMusic.FFXIV;
+                    bgMusicSwitcher.SwapBGMusic();
+                }
+            }
+           
         }
     }
 

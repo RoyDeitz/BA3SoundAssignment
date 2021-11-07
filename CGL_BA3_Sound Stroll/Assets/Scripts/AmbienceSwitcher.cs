@@ -36,6 +36,9 @@ public class AmbienceSwitcher : MonoBehaviour
         else 
         {
             backwardAmbienceObj.SetActive(false);
+            
         }
     }
+
+
 }
